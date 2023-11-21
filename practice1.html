@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Luyện tập tạo và sử dụng hàm 01</title>
+</head>
+<body>
+<h3 onclick="hello()">Bài 1</h3>
+<br>
+<h3 onclick="num2Input()">Bài 2</h3>
+<p>Kết quả là <span id="result2">...</span></p>
+<h3 onclick="ex3(6,5); console.log(ex3(3,4));"> Bài 3</h3>
+<br>
+<h3>Bài 4</h3>
+<br>
+<h3>Bài 5</h3>
+<label for="star"><input size="33" name="star" id="star" placeholder="Nhập tên ngôi sao (Viết hoa chữ cái đầu)" onchange="alert(belongTo(this.value))"></label>
+
+</body>
+<script>
+    // Bài 1
+    function hello() {
+        alert("Xin chào");
+    }
+
+    // Bài 2
+    function plus1(x) {
+        return x+1;
+    }
+    function num2Input() {
+        let num2 = +prompt("Nhập vào số");
+        document.getElementById("result2").innerText = plus1(num2).toString();
+    }
+    
+    // Bài 3
+    function ex3(a, b) {
+        if(a-b > 0) {
+            alert(`Số ${a} lớn hơn số ${b}.`)
+        }else {
+            return a+b;
+        }
+    }
+
+    // Bài 4
+    // function addNumbers() {
+    //     firstNum = 4;
+    //     secondNum = 8;
+    //     result = firstNum + secondNum;
+    //     return result;
+    // }
+    // result = 0;
+    // alert(result);
+    // result = addNumbers();
+    // alert(result);
+
+    // Bài 5
+    let stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let constellations = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    function belongTo(x) {
+        if (stars.indexOf(x) !== -1) {
+            return constellations[stars.indexOf(x)];
+        }
+        return "Không tìm thấy chòm sao";
+    }
+
+</script>
+</html>
