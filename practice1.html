@@ -7,7 +7,7 @@
 <body>
 <h3 onclick="hello()">Bài 1</h3>
 <br>
-<h3 onclick="num2Input()">Bài 2</h3>
+<h3 onclick="num2InOutput()">Bài 2</h3>
 <p>Kết quả là <span id="result2">...</span></p>
 <h3 onclick="ex3(6,5); console.log(ex3(3,4));"> Bài 3</h3>
 <br>
@@ -27,7 +27,7 @@
     function plus1(x) {
         return x+1;
     }
-    function num2Input() {
+    function num2InOutput() {
         let num2 = +prompt("Nhập vào số");
         document.getElementById("result2").innerText = plus1(num2).toString();
     }
