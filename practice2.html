@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Luyện tập tạo và sử dụng hàm 02</title>
+</head>
+<body>
+<h3>Bài 1: Tính bình phương</h3>
+<input type="number" name="" id="num1" placeholder="Tính bình phương">
+<p>Kết quả là: <span id="result1">...</span></p>
+
+<h3>Bài 2: Diện tích chu vi hình tròn</h3>
+<input type="number" name="" id="num2" placeholder="Bán kính hình tròn">
+<p>Diện tích của hình tròn là: <span id="area2">...</span></p>
+<p>Chu vi hình tròn là: <span id="perimeter2">...</span></p>
+
+<h3>Bài 3: Giai thừa</h3>
+<input type="number" name="" id="num3" placeholder="Nhập số nguyên">
+<p>Kết quả là: <span id="result3">...</span></p>
+
+<h3>Bài 4: Kiểm tra ký tự số</h3>
+<h3>Bài 5: Tìm số nhỏ nhất</h3>
+<h3>Bài 6: Kiểm tra số nguyên dương</h3>
+<h3>Bài 7: Đổi chỗ 2 số nguyên</h3>
+<h3>Bài 8: Đảo ngược mảng</h3>
+<h3>Bài 9: Tìm ký tự</h3>
+</body>
+<script>
+    // Bài 8
+    let ex8 = [30, 14, 48, 6, 88, 94, 46, 100, 3, 1, 35, 52, 23, 58, 67, 64, 5, 45, 89, 15]
+    function reverseArr(arr) {
+        let output = [];
+        for(let i = arr.length-1; i >= 0; i--) {
+            output.push(arr[i]);
+        }
+        return output;
+    }
+    ex8 = reverseArr(ex8);
+    console.log(ex8.join());
+    // console.log(reverseArr(ex8).join())
+
+    // Bài 9
+    let ex9 = ["x", "y", "g", "q", "w", "v", "p", "f", "n", "i", "j", "r", "r", "c", "u", "a", "k", "y", "m", "y"]
+    function inArr(arr, x) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (x === arr[i]) {
+                count++;
+            }
+        }
+        if (count !== 0)
+        return count;
+        return -1;
+    }
+    console.log(inArr(ex9, "b"));
+    console.log(inArr(ex9, "r"));
+
+</script>
+</html>
