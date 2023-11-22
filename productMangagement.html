@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng quản lý sản phẩm sử dụng hàm</title>
+    <link rel="stylesheet" href="productManagement.css">
+</head>
+
+<body>
+<div class="product-container">
+    <h3>Add New Product</h3>
+    <label for="newProduct"></label><input type="text" id="newProduct" placeholder="New Product">
+    <button onclick="addProduct();productDisplay(myProducts)">Add</button>
+<h3>Display All Product</h3>
+ <table>
+     <tbody id="producttable"></tbody>
+ </table>
+</div>
+
+<script src="productManagement.js"></script>
+</body>
+</html>
